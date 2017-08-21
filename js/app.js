@@ -4,7 +4,12 @@
 
 
 		$(document).ready(function(){
-			var weatherApi="https://api.openweathermap.org/data/2.5/forecast/daily?q=";
+			if(window.location.protocol != "https:") {
+					  window.location.href = "https:" + window.location.href.substring(window.location.protocol.length);
+
+					// Function that alters the protocol of URLs from http to https
+					}
+			var weatherApi="http://api.openweathermap.org/data/2.5/forecast/daily?q=";
 		    $(window).on('load',function(){
 		        $(".load-screen").fadeOut(2000, function() {
 				    $( this ).remove();
