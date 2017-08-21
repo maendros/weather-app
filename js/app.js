@@ -4,7 +4,7 @@
 
 
 		$(document).ready(function(){
-			var weatherApi="http://api.openweathermap.org/data/2.5/forecast/daily?q=";
+			var weatherApi="https://api.openweathermap.org/data/2.5/forecast/daily?q=";
 		    $(window).on('load',function(){
 		        $(".load-screen").fadeOut(2000, function() {
 				    $( this ).remove();
