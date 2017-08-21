@@ -1,0 +1,118 @@
+<html>
+	<header>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />	
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+		<!-- Latest compiled JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.14.1/moment.min.js"></script>
+		<link rel="stylesheet" href="css/app.css">
+		<script src="js/app.js" ></script>
+	    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1rn8xzxJDa3l1jU4OYNZEzr06PB77v_4&libraries=places&language=en&callback=initAutocomplete"
+ 	async defer></script>
+		<script>
+		//snipped taken from google places api
+			 function initAutocomplete() {
+			    // Create the autocomplete object, restricting the search to geographical
+			    // location types.
+			    autocomplete = new google.maps.places.Autocomplete(
+			        /** @type {!HTMLInputElement} */(document.getElementById('autocomplete')),
+			        {types: ['geocode']});
+
+			    // When the user selects an address from the dropdown, populate the address
+			    // fields in the form.
+			    autocomplete.addListener('place_changed', fillInCity);
+			  }
+
+			  function fillInCity() {
+			    // Get the place details from the autocomplete object.
+			    var place = autocomplete.getPlace();
+		
+			
+			  }
+
+		</script>
+	</header>
+
+	<body>
+		<!--loading-->
+		<div class="load-screen">
+    			<!--loading -->
+            <div class="animationload"></div>
+       				<!--loading-->
+			<div class="logo"><img src="img/support64.png" alt="umbrellapp logo"></div>
+			<div class="loading"><h1>umbrellapp</h1></div>
+		</div>
+		<!--loading-->
+			<div class="logosmall"><img src="img/support32.png" alt="umbrellapp mini logo"></div>
+			<!--sidebar-->
+			 <aside>
+				  <a href="#" class="btn one" data-toggle="collapse" data-target="#demo">
+				    <i class="fa fa-bars nav-toggle" aria-hidden="true"></i>
+				  </a>
+				  <div id="demo" class="collapse">
+				    <h1 class="best">Your Best Weather app</h1>
+				    <hr>
+				    <h1 class="team">Team History Contact</h1>
+				     <p class="suggest">suggest to a friend</p>
+				    <ul class="list-unstyled list-inline">
+				 
+						<li><span class="facebook-share" data-js="facebook-share"><i class="fa fa-2x fa-facebook"></i></span></li>
+						<li><span class="twitter-share" data-js="twitter-share"><i class="fa fa-2x fa-twitter"></i></span></li>
+						<li><span class="google-share" data-js="google-share"><i class="fa fa-2x fa-google-plus"></i></span></li>
+				    </ul>
+
+				  </div>
+			</aside>
+			<!--sidebar-->
+
+
+		<section class="container">	
+					<div class="fav"><p>Add to favorites</p> <img src="img/heart32.png" alt="umbrellapp fav icon"></div>
+					<div class="wrap">
+						<h3 id="type">type a location</h3>
+						<!--search button-->
+					   	<div class="search">
+					      <input  id="autocomplete" type="search" class="searchTerm" placeholder="type here ..."></input>
+					      <div type="submit" class="searchButton">
+					       <img src="img/search.png" alt="umbrellapp search" >
+					     </div>
+					 <!--search button-->
+					   	</div>
+					   	<h3 id="give">or give us your location</h3>
+					   	<!--access button-->
+					    <button type="button" class="btn btn-labeled">
+		                <img src="img/navigation.png" class="btn-label" alt="umbrellapp navigation"><span>access location</span></button>
+						<!--access button-->
+
+					</div>
+				
+					<main class="weat">
+					<!--todays results-->
+					<div class="top"  >
+						<div class="today"></div>
+						<div class="city"></div>
+						<div class="icontoday"></div>
+						<div class="tempmax"></div>
+						<div class="tempmin"></div>
+					</div>
+					<!--todays results-->
+					<!--forecast for 5 days-->
+					<div class="row date-results"></div>
+					<!--forecast for 5 days-->
+					</main>
+		</section>
+		
+			
+		
+	</body>
+</html>
+<!--
+
+-->
