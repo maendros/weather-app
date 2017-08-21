@@ -5,8 +5,8 @@
 
 		$(document).ready(function(){
 	
-			var weatherApi="http://api.openweathermap.org/data/2.5/forecast/daily?q=";
-			  if(window.location.protocol === 'https:') weatherApi = 'https://cors-anywhere.herokuapp.com/' + weatherApi;
+			var weatherApi="https://crossorigin.me/http://api.openweathermap.org/data/2.5/forecast/daily?q=";
+			
 		    $(window).on('load',function(){
 		        $(".load-screen").fadeOut(2000, function() {
 				    $( this ).remove();
