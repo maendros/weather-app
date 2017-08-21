@@ -1,14 +1,14 @@
 		
 
-
-
-
-		$(document).ready(function(){
-			if(window.location.protocol != "http:") {
+		if(window.location.protocol != "http:") {
 					  window.location.href = "http:" + window.location.href.substring(window.location.protocol.length);
 
 					// Function that alters the protocol of URLs from http to https
 					}
+
+
+		$(document).ready(function(){
+	
 			var weatherApi="http://api.openweathermap.org/data/2.5/forecast/daily?q=";
 		    $(window).on('load',function(){
 		        $(".load-screen").fadeOut(2000, function() {
